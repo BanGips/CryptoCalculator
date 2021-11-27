@@ -7,26 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4060FF5E274FB7E100FDCC82 /* CryptoCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4060FF5D274FB7E100FDCC82 /* CryptoCalculatorApp.swift */; };
-		4060FF60274FB7E100FDCC82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4060FF5F274FB7E100FDCC82 /* ContentView.swift */; };
-		4060FF62274FB7E300FDCC82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4060FF61274FB7E300FDCC82 /* Assets.xcassets */; };
-		4060FF65274FB7E300FDCC82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4060FF64274FB7E300FDCC82 /* Preview Assets.xcassets */; };
-		4060FF67274FB7E300FDCC82 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4060FF66274FB7E300FDCC82 /* Persistence.swift */; };
-		4060FF6A274FB7E300FDCC82 /* CryptoCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4060FF68274FB7E300FDCC82 /* CryptoCalculator.xcdatamodeld */; };
+		4021E72227522B180054B566 /* CryptoCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E72127522B180054B566 /* CryptoCalculatorApp.swift */; };
+		4021E72427522B180054B566 /* TapBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E72327522B180054B566 /* TapBarView.swift */; };
+		4021E72627522B190054B566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4021E72527522B190054B566 /* Assets.xcassets */; };
+		4021E72927522B190054B566 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4021E72827522B190054B566 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4060FF5A274FB7E100FDCC82 /* CryptoCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4060FF5D274FB7E100FDCC82 /* CryptoCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCalculatorApp.swift; sourceTree = "<group>"; };
-		4060FF5F274FB7E100FDCC82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4060FF61274FB7E300FDCC82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4060FF64274FB7E300FDCC82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4060FF66274FB7E300FDCC82 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4060FF69274FB7E300FDCC82 /* CryptoCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CryptoCalculator.xcdatamodel; sourceTree = "<group>"; };
+		4021E71E27522B180054B566 /* CryptoCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4021E72127522B180054B566 /* CryptoCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCalculatorApp.swift; sourceTree = "<group>"; };
+		4021E72327522B180054B566 /* TapBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarView.swift; sourceTree = "<group>"; };
+		4021E72527522B190054B566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4021E72827522B190054B566 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4060FF57274FB7E100FDCC82 /* Frameworks */ = {
+		4021E71B27522B180054B566 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,39 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4060FF51274FB7E100FDCC82 = {
+		4021E71527522B180054B566 = {
 			isa = PBXGroup;
 			children = (
-				4060FF5C274FB7E100FDCC82 /* CryptoCalculator */,
-				4060FF5B274FB7E100FDCC82 /* Products */,
+				4021E72027522B180054B566 /* CryptoCalculator */,
+				4021E71F27522B180054B566 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4060FF5B274FB7E100FDCC82 /* Products */ = {
+		4021E71F27522B180054B566 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4060FF5A274FB7E100FDCC82 /* CryptoCalculator.app */,
+				4021E71E27522B180054B566 /* CryptoCalculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4060FF5C274FB7E100FDCC82 /* CryptoCalculator */ = {
+		4021E72027522B180054B566 /* CryptoCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				4060FF5D274FB7E100FDCC82 /* CryptoCalculatorApp.swift */,
-				4060FF5F274FB7E100FDCC82 /* ContentView.swift */,
-				4060FF61274FB7E300FDCC82 /* Assets.xcassets */,
-				4060FF66274FB7E300FDCC82 /* Persistence.swift */,
-				4060FF68274FB7E300FDCC82 /* CryptoCalculator.xcdatamodeld */,
-				4060FF63274FB7E300FDCC82 /* Preview Content */,
+				4021E72127522B180054B566 /* CryptoCalculatorApp.swift */,
+				4021E72327522B180054B566 /* TapBarView.swift */,
+				4021E72527522B190054B566 /* Assets.xcassets */,
+				4021E72727522B190054B566 /* Preview Content */,
 			);
 			path = CryptoCalculator;
 			sourceTree = "<group>";
 		};
-		4060FF63274FB7E300FDCC82 /* Preview Content */ = {
+		4021E72727522B190054B566 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4060FF64274FB7E300FDCC82 /* Preview Assets.xcassets */,
+				4021E72827522B190054B566 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -76,13 +70,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4060FF59274FB7E100FDCC82 /* CryptoCalculator */ = {
+		4021E71D27522B180054B566 /* CryptoCalculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4060FF6D274FB7E300FDCC82 /* Build configuration list for PBXNativeTarget "CryptoCalculator" */;
+			buildConfigurationList = 4021E72C27522B190054B566 /* Build configuration list for PBXNativeTarget "CryptoCalculator" */;
 			buildPhases = (
-				4060FF56274FB7E100FDCC82 /* Sources */,
-				4060FF57274FB7E100FDCC82 /* Frameworks */,
-				4060FF58274FB7E100FDCC82 /* Resources */,
+				4021E71A27522B180054B566 /* Sources */,
+				4021E71B27522B180054B566 /* Frameworks */,
+				4021E71C27522B180054B566 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -90,25 +84,25 @@
 			);
 			name = CryptoCalculator;
 			productName = CryptoCalculator;
-			productReference = 4060FF5A274FB7E100FDCC82 /* CryptoCalculator.app */;
+			productReference = 4021E71E27522B180054B566 /* CryptoCalculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4060FF52274FB7E100FDCC82 /* Project object */ = {
+		4021E71627522B180054B566 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					4060FF59274FB7E100FDCC82 = {
+					4021E71D27522B180054B566 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = 4060FF55274FB7E100FDCC82 /* Build configuration list for PBXProject "CryptoCalculator" */;
+			buildConfigurationList = 4021E71927522B180054B566 /* Build configuration list for PBXProject "CryptoCalculator" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,44 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 4060FF51274FB7E100FDCC82;
-			productRefGroup = 4060FF5B274FB7E100FDCC82 /* Products */;
+			mainGroup = 4021E71527522B180054B566;
+			productRefGroup = 4021E71F27522B180054B566 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4060FF59274FB7E100FDCC82 /* CryptoCalculator */,
+				4021E71D27522B180054B566 /* CryptoCalculator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4060FF58274FB7E100FDCC82 /* Resources */ = {
+		4021E71C27522B180054B566 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4060FF65274FB7E300FDCC82 /* Preview Assets.xcassets in Resources */,
-				4060FF62274FB7E300FDCC82 /* Assets.xcassets in Resources */,
+				4021E72927522B190054B566 /* Preview Assets.xcassets in Resources */,
+				4021E72627522B190054B566 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4060FF56274FB7E100FDCC82 /* Sources */ = {
+		4021E71A27522B180054B566 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4060FF6A274FB7E300FDCC82 /* CryptoCalculator.xcdatamodeld in Sources */,
-				4060FF67274FB7E300FDCC82 /* Persistence.swift in Sources */,
-				4060FF60274FB7E100FDCC82 /* ContentView.swift in Sources */,
-				4060FF5E274FB7E100FDCC82 /* CryptoCalculatorApp.swift in Sources */,
+				4021E72427522B180054B566 /* TapBarView.swift in Sources */,
+				4021E72227522B180054B566 /* CryptoCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4060FF6B274FB7E300FDCC82 /* Debug */ = {
+		4021E72A27522B190054B566 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -214,7 +206,7 @@
 			};
 			name = Debug;
 		};
-		4060FF6C274FB7E300FDCC82 /* Release */ = {
+		4021E72B27522B190054B566 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,7 +261,7 @@
 			};
 			name = Release;
 		};
-		4060FF6E274FB7E300FDCC82 /* Debug */ = {
+		4021E72D27522B190054B566 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -298,7 +290,7 @@
 			};
 			name = Debug;
 		};
-		4060FF6F274FB7E300FDCC82 /* Release */ = {
+		4021E72E27522B190054B566 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -330,38 +322,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4060FF55274FB7E100FDCC82 /* Build configuration list for PBXProject "CryptoCalculator" */ = {
+		4021E71927522B180054B566 /* Build configuration list for PBXProject "CryptoCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4060FF6B274FB7E300FDCC82 /* Debug */,
-				4060FF6C274FB7E300FDCC82 /* Release */,
+				4021E72A27522B190054B566 /* Debug */,
+				4021E72B27522B190054B566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4060FF6D274FB7E300FDCC82 /* Build configuration list for PBXNativeTarget "CryptoCalculator" */ = {
+		4021E72C27522B190054B566 /* Build configuration list for PBXNativeTarget "CryptoCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4060FF6E274FB7E300FDCC82 /* Debug */,
-				4060FF6F274FB7E300FDCC82 /* Release */,
+				4021E72D27522B190054B566 /* Debug */,
+				4021E72E27522B190054B566 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4060FF68274FB7E300FDCC82 /* CryptoCalculator.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4060FF69274FB7E300FDCC82 /* CryptoCalculator.xcdatamodel */,
-			);
-			currentVersion = 4060FF69274FB7E300FDCC82 /* CryptoCalculator.xcdatamodel */;
-			path = CryptoCalculator.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 4060FF52274FB7E100FDCC82 /* Project object */;
+	rootObject = 4021E71627522B180054B566 /* Project object */;
 }
