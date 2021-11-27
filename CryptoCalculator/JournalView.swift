@@ -10,7 +10,7 @@ import SwiftUI
 struct JournalView: View {
     var body: some View {
         NavigationView {
-            Color.yellow
+            Color.secondary
                 .ignoresSafeArea()
             
                 .navigationTitle("Journal")

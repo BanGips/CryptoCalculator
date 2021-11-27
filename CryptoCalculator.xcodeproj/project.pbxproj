@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4008AB112752762D0017B897 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4008AB102752762D0017B897 /* TabView.swift */; };
 		4021E72227522B180054B566 /* CryptoCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E72127522B180054B566 /* CryptoCalculatorApp.swift */; };
 		4021E72427522B180054B566 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E72327522B180054B566 /* MainView.swift */; };
 		4021E72627522B190054B566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4021E72527522B190054B566 /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4008AB102752762D0017B897 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		4021E71E27522B180054B566 /* CryptoCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4021E72127522B180054B566 /* CryptoCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCalculatorApp.swift; sourceTree = "<group>"; };
 		4021E72327522B180054B566 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 			children = (
 				4021E72127522B180054B566 /* CryptoCalculatorApp.swift */,
 				4021E72327522B180054B566 /* MainView.swift */,
-				4008AB102752762D0017B897 /* TabView.swift */,
 				4021E72F27522D2B0054B566 /* CalculatorView.swift */,
 				4021E73127522D3C0054B566 /* JournalView.swift */,
 				4021E72527522B190054B566 /* Assets.xcassets */,
@@ -146,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4008AB112752762D0017B897 /* TabView.swift in Sources */,
 				4021E72427522B180054B566 /* MainView.swift in Sources */,
 				4021E73027522D2B0054B566 /* CalculatorView.swift in Sources */,
 				4021E73227522D3C0054B566 /* JournalView.swift in Sources */,
