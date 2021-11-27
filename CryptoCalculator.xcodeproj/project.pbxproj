@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4008AB112752762D0017B897 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4008AB102752762D0017B897 /* TabView.swift */; };
 		4021E72227522B180054B566 /* CryptoCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E72127522B180054B566 /* CryptoCalculatorApp.swift */; };
-		4021E72427522B180054B566 /* TapBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E72327522B180054B566 /* TapBarView.swift */; };
+		4021E72427522B180054B566 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E72327522B180054B566 /* MainView.swift */; };
 		4021E72627522B190054B566 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4021E72527522B190054B566 /* Assets.xcassets */; };
 		4021E72927522B190054B566 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4021E72827522B190054B566 /* Preview Assets.xcassets */; };
+		4021E73027522D2B0054B566 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E72F27522D2B0054B566 /* CalculatorView.swift */; };
+		4021E73227522D3C0054B566 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E73127522D3C0054B566 /* JournalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4008AB102752762D0017B897 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		4021E71E27522B180054B566 /* CryptoCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4021E72127522B180054B566 /* CryptoCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCalculatorApp.swift; sourceTree = "<group>"; };
-		4021E72327522B180054B566 /* TapBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarView.swift; sourceTree = "<group>"; };
+		4021E72327522B180054B566 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4021E72527522B190054B566 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4021E72827522B190054B566 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4021E72F27522D2B0054B566 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		4021E73127522D3C0054B566 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				4021E72127522B180054B566 /* CryptoCalculatorApp.swift */,
-				4021E72327522B180054B566 /* TapBarView.swift */,
+				4021E72327522B180054B566 /* MainView.swift */,
+				4008AB102752762D0017B897 /* TabView.swift */,
+				4021E72F27522D2B0054B566 /* CalculatorView.swift */,
+				4021E73127522D3C0054B566 /* JournalView.swift */,
 				4021E72527522B190054B566 /* Assets.xcassets */,
 				4021E72727522B190054B566 /* Preview Content */,
 			);
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4021E72427522B180054B566 /* TapBarView.swift in Sources */,
+				4008AB112752762D0017B897 /* TabView.swift in Sources */,
+				4021E72427522B180054B566 /* MainView.swift in Sources */,
+				4021E73027522D2B0054B566 /* CalculatorView.swift in Sources */,
+				4021E73227522D3C0054B566 /* JournalView.swift in Sources */,
 				4021E72227522B180054B566 /* CryptoCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,8 +287,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,9 +298,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = BG.CryptoCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,8 +319,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +332,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
