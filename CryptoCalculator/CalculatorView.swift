@@ -11,17 +11,23 @@ struct CalculatorView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.indigo
+                Color("mainBlack")
                     .ignoresSafeArea()
+                Text("Heelo")
             }
-            .navigationTitle("Calculator")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Image(systemName: "doc.badge.gearshape.fill")
-                        .font(.title)
-                        
+            
+                .navigationTitle("Calculator")
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Image(systemName: "equal.square")
+                            .font(.title)
+                            .foregroundColor(.yellow)
+                        Image(systemName: "equal.square")
+                            .font(.title)
+                            .foregroundColor(.yellow)
+                    }
                 }
-            }
+                
         }
     }
 }

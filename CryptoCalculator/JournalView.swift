@@ -10,9 +10,9 @@ import SwiftUI
 struct JournalView: View {
     var body: some View {
         NavigationView {
-            Color.secondary
-                .ignoresSafeArea()
-            
+            List {
+                DropDownItem()
+            }
                 .navigationTitle("Journal")
         }
     }
@@ -21,5 +21,27 @@ struct JournalView: View {
 struct JournalView_Previews: PreviewProvider {
     static var previews: some View {
         JournalView()
+    }
+}
+
+
+struct DropDownItem: View {
+    
+    @State private var expand = false
+    
+    var body: some View {
+        DisclosureGroup(isExpanded: $expand) {
+            Text("TO DO")
+        } label: {
+            Text("some text")
+        }
+        .padding()
+        .background(Color.blue.cornerRadius(8))
+    }
+}
+
+struct DropDownItem_Previews: PreviewProvider {
+    static var previews: some View {
+        DropDownItem()
     }
 }
