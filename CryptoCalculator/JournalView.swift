@@ -13,8 +13,9 @@ struct JournalView: View {
             List {
                 DropDownItem()
             }
-                .navigationTitle("Journal")
+            .navigationTitle("Journal")
         }
+        .navigationViewStyle(.stack)
     }
 }
 

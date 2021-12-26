@@ -13,6 +13,8 @@
 		4021E72927522B190054B566 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4021E72827522B190054B566 /* Preview Assets.xcassets */; };
 		4021E73027522D2B0054B566 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E72F27522D2B0054B566 /* CalculatorView.swift */; };
 		4021E73227522D3C0054B566 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E73127522D3C0054B566 /* JournalView.swift */; };
+		408DE6FD2778766200D4264A /* CalculatorSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408DE6FC2778766200D4264A /* CalculatorSubviews.swift */; };
+		408DE7072778856A00D4264A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408DE7062778856A00D4264A /* Montserrat-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		4021E72827522B190054B566 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4021E72F27522D2B0054B566 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		4021E73127522D3C0054B566 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
+		408DE6FC2778766200D4264A /* CalculatorSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSubviews.swift; sourceTree = "<group>"; };
+		408DE7062778856A00D4264A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				4021E72327522B180054B566 /* MainView.swift */,
 				4021E72F27522D2B0054B566 /* CalculatorView.swift */,
 				4021E73127522D3C0054B566 /* JournalView.swift */,
+				408DE6FB2778752C00D4264A /* views */,
+				408DE6FE2778790800D4264A /* fonts */,
 				4021E72527522B190054B566 /* Assets.xcassets */,
 				4021E72727522B190054B566 /* Preview Content */,
 			);
@@ -71,6 +77,22 @@
 				4021E72827522B190054B566 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		408DE6FB2778752C00D4264A /* views */ = {
+			isa = PBXGroup;
+			children = (
+				408DE6FC2778766200D4264A /* CalculatorSubviews.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		408DE6FE2778790800D4264A /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				408DE7062778856A00D4264A /* Montserrat-Bold.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				408DE7072778856A00D4264A /* Montserrat-Bold.ttf in Resources */,
 				4021E72927522B190054B566 /* Preview Assets.xcassets in Resources */,
 				4021E72627522B190054B566 /* Assets.xcassets in Resources */,
 			);
@@ -145,6 +168,7 @@
 			files = (
 				4021E72427522B180054B566 /* MainView.swift in Sources */,
 				4021E73027522D2B0054B566 /* CalculatorView.swift in Sources */,
+				408DE6FD2778766200D4264A /* CalculatorSubviews.swift in Sources */,
 				4021E73227522D3C0054B566 /* JournalView.swift in Sources */,
 				4021E72227522B180054B566 /* CryptoCalculatorApp.swift in Sources */,
 			);
@@ -280,6 +304,7 @@
 				DEVELOPMENT_TEAM = 6GTJ637UNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,6 +337,7 @@
 				DEVELOPMENT_TEAM = 6GTJ637UNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
