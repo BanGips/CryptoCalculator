@@ -15,6 +15,7 @@
 		4021E73227522D3C0054B566 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4021E73127522D3C0054B566 /* JournalView.swift */; };
 		408DE6FD2778766200D4264A /* CalculatorSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408DE6FC2778766200D4264A /* CalculatorSubviews.swift */; };
 		408DE7072778856A00D4264A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408DE7062778856A00D4264A /* Montserrat-Bold.ttf */; };
+		408DE70B2778F88F00D4264A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408DE70A2778F88F00D4264A /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4021E73127522D3C0054B566 /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
 		408DE6FC2778766200D4264A /* CalculatorSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorSubviews.swift; sourceTree = "<group>"; };
 		408DE7062778856A00D4264A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		408DE70A2778F88F00D4264A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				408DE6FC2778766200D4264A /* CalculatorSubviews.swift */,
+				408DE70A2778F88F00D4264A /* Extensions.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4021E72427522B180054B566 /* MainView.swift in Sources */,
+				408DE70B2778F88F00D4264A /* Extensions.swift in Sources */,
 				4021E73027522D2B0054B566 /* CalculatorView.swift in Sources */,
 				408DE6FD2778766200D4264A /* CalculatorSubviews.swift in Sources */,
 				4021E73227522D3C0054B566 /* JournalView.swift in Sources */,

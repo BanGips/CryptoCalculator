@@ -30,12 +30,12 @@ struct TitleAndPrice: View {
         Group {
             HStack {
                 Text(text)
-                    .font(Font.custom("Montserrat Bold", size: fontSize))
+                    .font(.montserratBold(size: fontSize))
                 
                 Spacer()
                 
                 Text(price)
-                    .font(Font.custom("Montserrat Bold", size: fontSize))
+                    .font(.montserratBold(size: fontSize))
                     .foregroundColor(priceColor ?? .white)
             }
             
@@ -68,21 +68,20 @@ struct CornerRadiusStyle: ViewModifier {
     }
 }
 
-extension View {
-    func cornerRadius(radius: CGFloat, corners: UIRectCorner) -> some View {
-        modifier(CornerRadiusStyle(radius: radius, corners: corners))
-    }
-}
-
 struct RoundedTextField: View {
-    
     @Binding var text: String
+    var width: CGFloat = .infinity
+    var height: CGFloat = 45
     
     struct RoundedTextFieldStyle: TextFieldStyle {
         
+        var height: CGFloat
+        var width: CGFloat
+        
         func _body(configuration: TextField<Self._Label>) -> some View {
             configuration
-                .frame(height: 45)
+                .frame(height: height)
+                .frame(maxWidth: width)
                 .padding(.horizontal)
                 .overlay(RoundedRectangle(cornerRadius: 4).stroke(.white, lineWidth: 1))
         }
@@ -90,7 +89,31 @@ struct RoundedTextField: View {
     
     var body: some View {
         TextField("", text: $text)
-            .textFieldStyle(RoundedTextFieldStyle())
-            .font(Font.custom("Montserrat Bold", size: 16))
+            .textFieldStyle(RoundedTextFieldStyle(height: height, width: width))
+            .font(.montserratBold(size: 16))
+            .keyboardType(.decimalPad)
     }
 }
+
+struct TitleAndInfo: View {
+    
+    let text: String
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                Text(text)
+                    .font(.montserratBold(size: 16))
+                Button {
+                    
+                } label: {
+                    Image("fi-br-info")
+                        .resizable()
+                        .frame(width: 15, height: 15)
+                        .foregroundColor(.accentColor)
+                }
+            }
+        }
+    }
+}
+
