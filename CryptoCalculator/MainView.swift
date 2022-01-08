@@ -21,7 +21,7 @@ struct MainView: View {
                 .tag(ViewToShow.calculator)
                 .tabItem {
                     Image("calc")
-                    Text("Journal")
+                    Text("Calculator")
                 }
             
             JournalView()

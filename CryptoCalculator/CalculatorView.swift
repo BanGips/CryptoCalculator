@@ -21,10 +21,10 @@ struct CalculatorView: View {
         NavigationView {
             ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
                 Color("mainBlack")
-                
                     .ignoresSafeArea()
+                
                 VStack {
-                    VStack(spacing: 16) {
+                    VStack(spacing: 10) {
                         TitleAndPrice(text: "ENTRY AMOUNT", price: "125 $", fontSize: 20, priceColor: Color("orange"))
                         TitleAndPrice(text: "PROFIT", price: "25 $", fontSize: 16)
                         TitleAndPrice(text: "AMOUNT OF RISK", price: "125 $", fontSize: 16)
@@ -33,7 +33,7 @@ struct CalculatorView: View {
                     
                     Group {
                         ScrollView {
-                            VStack(alignment: .leading,spacing: 31) {
+                            VStack(alignment: .leading, spacing: 31) {
                                 HStack {
                                     VStack(alignment: .leading) {
                                         TitleAndInfo(text: "DEPOST")
@@ -99,14 +99,12 @@ struct CalculatorView: View {
                                         .padding(.leading, 35)
                                         .offset(y: -15)
                                         .focused($amountIsFocused)
-                                        
                                 }
                                 
                                 VStack(alignment: .leading) {
                                     TitleAndInfo(text: "ENTRY PRICE")
                                     RoundedTextField(text: $entryPrice)
                                         .focused($amountIsFocused)
-                                        
                                 }
                                 
                                 VStack(alignment: .leading) {
@@ -121,17 +119,16 @@ struct CalculatorView: View {
                                         .focused($amountIsFocused)
                                 }
                             }
-
                             .padding(.horizontal, 22)
+                            .padding(.bottom, 5)
                         }
-                        .padding(.top, 42)
+                        .padding(.top, 20)
                     }
                     .background(Color("nextBlack"))
                     .cornerRadius(radius: 46, corners: [.topLeft, .topRight])
-                    .padding(.top, 34)
-                    
+                    .padding(.top, 10)
                 }
-                .padding(.top, 63)
+                .padding(.top, 20)
             }
             .navigationTitle("Calculator")
             .toolbar {
