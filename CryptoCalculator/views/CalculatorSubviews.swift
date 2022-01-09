@@ -69,7 +69,8 @@ struct CornerRadiusStyle: ViewModifier {
 }
 
 struct RoundedTextField: View {
-    @Binding var text: String
+    @Binding var text: Double?
+    
     var width: CGFloat = .infinity
     var height: CGFloat = 45
     
@@ -88,7 +89,7 @@ struct RoundedTextField: View {
     }
     
     var body: some View {
-        TextField("", text: $text)
+        TextField.init("", value: $text, format: .number)
             .textFieldStyle(RoundedTextFieldStyle(height: height, width: width))
             .font(.montserratBold(size: 16))
             .keyboardType(.decimalPad)

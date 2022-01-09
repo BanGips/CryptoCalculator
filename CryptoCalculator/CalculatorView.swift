@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct CalculatorView: View {
-    @State var text = ""
-    @State var leverage = ""
-    @State var entryPrice = ""
-    @State var takeProfit = ""
-    @State var stopLose = ""
-    @State var step = 1.0
+    
+    @StateObject var model = CalculatorModel()
     
     @FocusState private var amountIsFocused: Bool
     
@@ -33,7 +29,7 @@ struct CalculatorView: View {
                     
                     Group {
                         ScrollView {
-                            VStack(alignment: .leading, spacing: 31) {
+                            VStack(alignment: .leading, spacing: 20) {
                                 HStack {
                                     VStack(alignment: .leading) {
                                         TitleAndInfo(text: "DEPOST")
@@ -82,40 +78,45 @@ struct CalculatorView: View {
                                 }
                                 
                                 TitleAndInfo(text: "LEVERAGE")
+                                    .padding(.top, 10)
                                 
                                 HStack {
                                     VStack {
-                                        Slider(value: $step, in: 0...100)
+                                        Slider(value: $model.leverage, in: 1...100, step: 1)
                                         HStack {
-                                            Text("0")
-                                                .font(.montserratBold(size: 18))
+                                            Text("1")
+                                                .font(.montserratBold(size: 14))
                                             Spacer()
                                             Text("100")
-                                                .font(.montserratBold(size: 18))
+                                                .font(.montserratBold(size: 14))
                                         }
                                     }
                                     
-                                    RoundedTextField(text: $leverage, width: 30, height: 32)
-                                        .padding(.leading, 35)
-                                        .offset(y: -15)
-                                        .focused($amountIsFocused)
+                                    Text(Int(model.leverage).description)
+                                        .font(.montserratBold(size: 22))
+                                        .foregroundColor(Color("orange"))
+                                        .underline()
+                                        .offset(y: -10)
+                                        .frame(width: 40, height: 32)
+                                        .padding()
+                                        
                                 }
                                 
                                 VStack(alignment: .leading) {
                                     TitleAndInfo(text: "ENTRY PRICE")
-                                    RoundedTextField(text: $entryPrice)
+                                    RoundedTextField(text: $model.entryPrice)
                                         .focused($amountIsFocused)
                                 }
                                 
                                 VStack(alignment: .leading) {
                                     TitleAndInfo(text: "TAKE PROFIT")
-                                    RoundedTextField(text: $takeProfit)
+                                    RoundedTextField(text: $model.takeProfit)
                                         .focused($amountIsFocused)
                                 }
                                 
                                 VStack(alignment: .leading) {
                                     TitleAndInfo(text: "STOP LOSE")
-                                    RoundedTextField(text: $stopLose)
+                                    RoundedTextField(text: $model.stopLose)
                                         .focused($amountIsFocused)
                                 }
                             }
