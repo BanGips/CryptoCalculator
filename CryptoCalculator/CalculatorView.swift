@@ -82,22 +82,21 @@ struct CalculatorView: View {
                                 
                                 HStack {
                                     VStack {
-                                        Slider(value: $model.leverage, in: 1...100, step: 1)
+                                        Slider(value: $model.leverage, in: 1...50, step: 1)
                                         HStack {
                                             Text("1")
                                                 .font(.montserratBold(size: 14))
                                             Spacer()
-                                            Text("100")
+                                            Text("50")
                                                 .font(.montserratBold(size: 14))
                                         }
                                     }
                                     
                                     Text(Int(model.leverage).description)
-                                        .font(.montserratBold(size: 22))
+                                        .font(.montserratBold(size: 24))
                                         .foregroundColor(Color("orange"))
-                                        .underline()
                                         .offset(y: -10)
-                                        .frame(width: 40, height: 32)
+                                        .frame(width: 45, height: 32)
                                         .padding()
                                         
                                 }
@@ -123,7 +122,7 @@ struct CalculatorView: View {
                             .padding(.horizontal, 22)
                             .padding(.bottom, 5)
                         }
-                        .padding(.top, 20)
+                        .padding(.top, 35)
                     }
                     .background(Color("nextBlack"))
                     .cornerRadius(radius: 46, corners: [.topLeft, .topRight])
