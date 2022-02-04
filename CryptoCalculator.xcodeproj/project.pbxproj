@@ -17,6 +17,8 @@
 		408DE7072778856A00D4264A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 408DE7062778856A00D4264A /* Montserrat-Bold.ttf */; };
 		408DE70B2778F88F00D4264A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408DE70A2778F88F00D4264A /* Extensions.swift */; };
 		40AD19D3278AF4C100D9EEF1 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AD19D2278AF4C100D9EEF1 /* CalculatorModel.swift */; };
+		40EEFA1F27AA8BE30082CC4A /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EEFA1E27AA8BE30082CC4A /* UserDefaults.swift */; };
+		40EEFA2327AA95490082CC4A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EEFA2227AA95490082CC4A /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		408DE7062778856A00D4264A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		408DE70A2778F88F00D4264A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		40AD19D2278AF4C100D9EEF1 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		40EEFA1E27AA8BE30082CC4A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		40EEFA2227AA95490082CC4A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 				4021E73127522D3C0054B566 /* JournalView.swift */,
 				40AD19D1278AF48B00D9EEF1 /* Models */,
 				408DE6FB2778752C00D4264A /* views */,
+				40EEFA1D27AA8BC00082CC4A /* Utilities */,
 				408DE6FE2778790800D4264A /* fonts */,
 				4021E72527522B190054B566 /* Assets.xcassets */,
 				4021E72727522B190054B566 /* Preview Content */,
@@ -89,6 +94,7 @@
 			children = (
 				408DE6FC2778766200D4264A /* CalculatorSubviews.swift */,
 				408DE70A2778F88F00D4264A /* Extensions.swift */,
+				40EEFA2227AA95490082CC4A /* SettingsView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -107,6 +113,14 @@
 				40AD19D2278AF4C100D9EEF1 /* CalculatorModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		40EEFA1D27AA8BC00082CC4A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				40EEFA1E27AA8BE30082CC4A /* UserDefaults.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +197,9 @@
 				4021E72427522B180054B566 /* MainView.swift in Sources */,
 				408DE70B2778F88F00D4264A /* Extensions.swift in Sources */,
 				4021E73027522D2B0054B566 /* CalculatorView.swift in Sources */,
+				40EEFA2327AA95490082CC4A /* SettingsView.swift in Sources */,
 				408DE6FD2778766200D4264A /* CalculatorSubviews.swift in Sources */,
+				40EEFA1F27AA8BE30082CC4A /* UserDefaults.swift in Sources */,
 				4021E73227522D3C0054B566 /* JournalView.swift in Sources */,
 				4021E72227522B180054B566 /* CryptoCalculatorApp.swift in Sources */,
 				40AD19D3278AF4C100D9EEF1 /* CalculatorModel.swift in Sources */,

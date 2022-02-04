@@ -9,10 +9,19 @@ import SwiftUI
 
 struct CalculatorView: View {
     
-    @StateObject var model = CalculatorModel()
+    @StateObject private var model = CalculatorModel()
     
     @FocusState private var amountIsFocused: Bool
+    @State private var isShowingSettings = false
     
+    private var longColor: Color {
+        return model.long ? Color("green") : .white
+    }
+    
+    private var shortColor: Color {
+        return !model.long ? Color("red") : .white
+    }
+
     var body: some View {
         NavigationView {
             ZStack(alignment: Alignment(horizontal: .center, vertical: .top)) {
@@ -21,9 +30,17 @@ struct CalculatorView: View {
                 
                 VStack {
                     VStack(spacing: 10) {
-                        TitleAndPrice(text: "ENTRY AMOUNT", price: "125 $", fontSize: 20, priceColor: Color("orange"))
-                        TitleAndPrice(text: "PROFIT", price: "25 $", fontSize: 16)
-                        TitleAndPrice(text: "AMOUNT OF RISK", price: "125 $", fontSize: 16)
+                        TitleAndPrice(text: "ENTRY AMOUNT",
+                                      price: model.entryAmount.addedDollarSign,
+                                      fontSize: 20,
+                                      priceColor: Color("orange"))
+                        TitleAndPrice(text: "PROFIT",
+                                      price: model.profit.addedDollarSign,
+                                      fontSize: 16)
+                        TitleAndPrice(text: "AMOUNT OF RISK",
+                                      price: model.amountOfRisk.addedDollarSign,
+                                      fontSize: 16)
+
                     }
                     .padding(.horizontal, 22)
                     
@@ -32,48 +49,54 @@ struct CalculatorView: View {
                             VStack(alignment: .leading, spacing: 20) {
                                 HStack {
                                     VStack(alignment: .leading) {
-                                        TitleAndInfo(text: "DEPOST")
-                                        Text("1000 $")
+                                        TitleAndInfo(text: "DEPOSIT")
+                                        Text(model.deposit.addedDollarSign)
                                             .font(.montserratBold(size: 18))
                                             .foregroundColor(Color("orange"))
                                             .underline()
+                                            .onTapGesture {
+                                                isShowingSettings.toggle()
+                                            }
                                     }
                                     
                                     Spacer()
                                     
                                     VStack(alignment: .leading) {
                                         TitleAndInfo(text: "RISK %")
-                                        Text("3")
+                                        Text(model.riskPerTrade.addedDollarSign)
                                             .font(.montserratBold(size: 18))
                                             .foregroundColor(Color("orange"))
                                             .underline()
+                                            .onTapGesture {
+                                                isShowingSettings.toggle()
+                                            }
                                     }
-                                    Spacer()
+                                    .offset(x: -70)
                                 }
                                 
                                 HStack {
                                     Button {
-                                        
+                                        model.long = true
                                     } label: {
                                         Text("LONG")
                                             .font(.montserratBold(size: 16))
-                                            .foregroundColor(Color("green"))
+                                            .foregroundColor(longColor)
                                             .frame(width: 150 ,height: 32)
                                             .overlay(RoundedRectangle(cornerRadius: 3)
-                                                        .stroke(Color("green"), lineWidth: 1))
+                                                        .stroke(longColor, lineWidth: 1))
                                     }
                                     
                                     Spacer()
                                     
                                     Button {
-                                        
+                                        model.long = false
                                     } label: {
                                         Text("SHORT")
                                             .font(.montserratBold(size: 16))
-                                            .foregroundColor(.white)
+                                            .foregroundColor(shortColor)
                                             .frame(width: 150 ,height: 32)
                                             .overlay(RoundedRectangle(cornerRadius: 3)
-                                                        .stroke(.white, lineWidth: 1))
+                                                        .stroke(shortColor, lineWidth: 1))
                                     }
                                 }
                                 
@@ -82,7 +105,12 @@ struct CalculatorView: View {
                                 
                                 HStack {
                                     VStack {
-                                        Slider(value: $model.leverage, in: 1...50, step: 1)
+                                        Slider(value: .init(get: {
+                                            model.leverage
+                                        }, set: {
+                                            model.leverage = $0
+                                        }), in: 1...50, step: 1)
+                                        
                                         HStack {
                                             Text("1")
                                                 .font(.montserratBold(size: 14))
@@ -98,7 +126,6 @@ struct CalculatorView: View {
                                         .offset(y: -10)
                                         .frame(width: 45, height: 32)
                                         .padding()
-                                        
                                 }
                                 
                                 VStack(alignment: .leading) {
@@ -143,19 +170,25 @@ struct CalculatorView: View {
                     }
                     
                     Button {
-                        //                        TO DO
+                        isShowingSettings.toggle()
                     } label: {
                         Image("fi-br-settings")
                             .resizable()
                             .frame(width: 28, height: 28)
                             .foregroundColor(.accentColor)
+                    }.fullScreenCover(isPresented: $isShowingSettings) {
+                        SettingsView(model: model)
+                            .clearModalBackground()
                     }
                 }
-                ToolbarItem.init(placement: .keyboard) {
+                
+                ToolbarItem(placement: .keyboard) {
                     HStack {
                         Spacer()
-                        Button("Done") {
-                            amountIsFocused = false
+                        if !isShowingSettings {
+                            Button("Done") {
+                                amountIsFocused = false
+                            }
                         }
                     }
                 }
