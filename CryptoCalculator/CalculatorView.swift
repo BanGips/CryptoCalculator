@@ -40,7 +40,6 @@ struct CalculatorView: View {
                         TitleAndPrice(text: "AMOUNT OF RISK",
                                       price: model.amountOfRisk.addedDollarSign,
                                       fontSize: 16)
-
                     }
                     .padding(.horizontal, 22)
                     
@@ -179,16 +178,15 @@ struct CalculatorView: View {
                     }.fullScreenCover(isPresented: $isShowingSettings) {
                         SettingsView(model: model)
                             .clearModalBackground()
+                            .focused($amountIsFocused)
                     }
                 }
                 
                 ToolbarItem(placement: .keyboard) {
                     HStack {
                         Spacer()
-                        if !isShowingSettings {
-                            Button("Done") {
-                                amountIsFocused = false
-                            }
+                        Button("Done") {
+                            amountIsFocused = false
                         }
                     }
                 }

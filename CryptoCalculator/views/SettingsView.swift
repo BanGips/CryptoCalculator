@@ -17,6 +17,10 @@ struct SettingsView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             Color(red: 20, green: 22, blue: 32).opacity(0.7)
+                .gesture(DragGesture(minimumDistance: 10, coordinateSpace: .global).onEnded { _ in
+                    presentationMode.wrappedValue.dismiss()
+                })
+                
             
             Group {
                 VStack(spacing: 30) {
