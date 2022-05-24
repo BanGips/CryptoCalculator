@@ -42,8 +42,6 @@ struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
             .preferredColorScheme(.dark)
-        //            .previewDevice(PreviewDevice(rawValue: "iPhone SE (2nd generation)"))
-        //            .previewDevice(PreviewDevice(rawValue: "iPhone SE (1st generation)"))
-        //            .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
+        
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @Environment(\.presentationMode) var presentationMode
+    @Environment(\.dismiss) private var dismiss
     @ObservedObject var model: CalculatorModel
     
     @State private var deposit = 0
@@ -17,10 +17,10 @@ struct SettingsView: View {
     var body: some View {
         ZStack(alignment: .bottom) {
             Color(red: 20, green: 22, blue: 32).opacity(0.7)
-                .gesture(DragGesture(minimumDistance: 10, coordinateSpace: .global).onEnded { _ in
-                    presentationMode.wrappedValue.dismiss()
-                })
-                
+                .gesture(DragGesture(minimumDistance: 10)
+                    .onEnded { _ in
+                        dismiss()
+                    })
             
             Group {
                 VStack(spacing: 30) {
@@ -33,7 +33,7 @@ struct SettingsView: View {
                         TitleAndInfo(text: "DEPOSIT")
                         TextField("", value: $deposit, format: .currency(code: "USD"))
                             .font(.montserratBold(size: 16))
-                            .textFieldStyle(RoundedTextField.RoundedTextFieldStyle())
+                            .textFieldStyle(.rounded)
                             .keyboardType(.numberPad)
                             .ignoresSafeArea(.keyboard, edges: .bottom)
                     }
@@ -42,13 +42,13 @@ struct SettingsView: View {
                         TitleAndInfo(text: "RISK PER TRADE")
                         TextField("", value: $riskPerTrade, format: .percent)
                             .font(.montserratBold(size: 16))
-                            .textFieldStyle(RoundedTextField.RoundedTextFieldStyle())
+                            .textFieldStyle(.rounded)
                             .keyboardType(.numberPad)
                     }
                     
                     Button {
                         model.saveSettings(deposit: deposit, riskPerTrade: riskPerTrade)
-                        presentationMode.wrappedValue.dismiss()
+                        dismiss()
                     } label: {
                         Text("SAVE")
                             .font(.montserratBold(size: 15))
@@ -61,12 +61,9 @@ struct SettingsView: View {
                             ], startPoint: .leading, endPoint: .trailing))
                             .cornerRadius(15)
                     }
-                    
-
                 }
                 .padding(.horizontal, 25)
                 .padding(.vertical, 40)
-
             }
             .background(Color("nextBlack"))
             .cornerRadius(radius: 46, corners: [.topLeft, .topRight])
@@ -74,11 +71,9 @@ struct SettingsView: View {
                 deposit = model.deposit
                 riskPerTrade = model.riskPerTrade
             }
-
         }
-        .ignoresSafeArea(.container, edges: .all)
+        .ignoresSafeArea(.container, edges: .bottom)
     }
-
 }
 
 struct SettingsView_Previews: PreviewProvider {
@@ -108,7 +103,7 @@ struct ClearBackgroundViewModifier: ViewModifier {
 }
 
 extension View {
-    func clearModalBackground()->some View {
+    func clearModalBackground( )-> some View {
         self.modifier(ClearBackgroundViewModifier())
     }
 }

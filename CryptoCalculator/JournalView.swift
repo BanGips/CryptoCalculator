@@ -12,7 +12,11 @@ struct JournalView: View {
         NavigationView {
             List {
                 DropDownItem()
+                DropDownItem()
+                DropDownItem()
             }
+            .listStyle(.plain)
+            
             .navigationTitle("Journal")
         }
         .navigationViewStyle(.stack)
@@ -36,6 +40,7 @@ struct DropDownItem: View {
         } label: {
             Text("some text")
         }
+        .listRowSeparator(.hidden)
         .padding()
         .background(Color.blue.cornerRadius(8))
     }

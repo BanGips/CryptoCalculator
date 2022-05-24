@@ -13,6 +13,7 @@ struct CryptoCalculatorApp: App {
         WindowGroup {
             MainView()
                 .preferredColorScheme(.dark)
+                
         }
     }
 }

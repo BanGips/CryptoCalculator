@@ -71,21 +71,27 @@ struct CornerRadiusStyle: ViewModifier {
 struct RoundedTextField: View {
     @Binding var text: Double?
     
-    struct RoundedTextFieldStyle: TextFieldStyle {
-        func _body(configuration: TextField<Self._Label>) -> some View {
-            configuration
-                .frame(height: 40)
-                .frame(maxWidth: .infinity)
-                .padding(.horizontal)
-                .overlay(RoundedRectangle(cornerRadius: 4).stroke(.white, lineWidth: 1))
-        }
-    }
-    
     var body: some View {
-        TextField.init("", value: $text, format: .currency(code: "USD"))
-            .textFieldStyle(RoundedTextFieldStyle())
+        TextField("", value: $text, format: .currency(code: "USD"))
+            .textFieldStyle(.rounded)
             .font(.montserratBold(size: 16))
             .keyboardType(.decimalPad)
+    }
+}
+
+struct RoundedTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .frame(height: 40)
+            .padding(.horizontal)
+            .overlay(RoundedRectangle(cornerRadius: 4).stroke(.white, lineWidth: 1))
+    }
+}
+
+extension TextFieldStyle where Self == RoundedTextFieldStyle {
+
+    static var rounded: RoundedTextFieldStyle {
+        return RoundedTextFieldStyle()
     }
 }
 
